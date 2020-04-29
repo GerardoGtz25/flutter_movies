@@ -73,10 +73,48 @@ class HomeScreen extends StatelessWidget {
                   margin: EdgeInsets.only(top: 16),
                   child: ListView(
                     children: <Widget>[
-                      getItemList('Drama', Colors.red),
-                      getItemList('Terror', Colors.blue),
-                      getItemList('Commedy', Colors.green),
-                      getItemList('Science Fiction', Colors.purple),
+                      Container(
+                        width: double.infinity,
+                        margin: EdgeInsets.only(bottom: 10),
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Colors.amber,
+                        ),
+                      ),
+                      Container(
+                        width: double.infinity,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Colors.teal,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                width: 75,
+                                height: 65,
+                                margin: EdgeInsets.only(left: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.tealAccent,
+                                  borderRadius: BorderRadius.all(Radius.circular(75)),
+                                ),
+                              )
+                            ),
+                            Expanded(
+                              flex: 8,
+                              child: Container(
+                                margin: EdgeInsets.only(left: 10),
+                                width: double.infinity,
+                                color: Colors.deepPurple
+                              )
+                            )
+                          ],
+                        ),
+                      ),
                     ]
                   )
                 )
