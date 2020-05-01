@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:movies/client/api.dart';
 
 class HomeScreen extends StatelessWidget {
+
+  final Api api = Api();
+
+  void initState() {
+    api.getCharacters();
+  }
 
   final genreList = ['Terror', 'Drama', 'Commedy', 'Another one'];
 
